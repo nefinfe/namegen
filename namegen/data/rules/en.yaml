@@ -1,0 +1,34 @@
+# English (generic) rule pack.
+# Lightweight M1 placeholder. M4 will replace the proxy phonotactics with a
+# proper G2P pipeline and sonority-sequencing checks.
+
+language: en
+description: >
+  Generic English conventions. Not distinguished by dialect in v0.1.
+
+orthography:
+  require_capital: true
+  max_repeat: 3
+  allowed_diacritics: ""  # plain ASCII Latin only
+
+phonotactics:
+  min_length: 2
+  max_length: 20
+  allowed_characters: "abcdefghijklmnopqrstuvwxyz"
+  forbidden_digraphs:
+    - "qx"
+    - "xz"
+    - "bz"
+    - "kz"
+    - "vx"
+
+morphology:
+  # M5 territory. Left empty so the morphology validator is a no-op.
+  affixes: []
+
+eras:
+  - "1800-1850"
+  - "1850-1900"
+  - "1900-1950"
+  - "1950-2000"
+  - "2000-2025"
