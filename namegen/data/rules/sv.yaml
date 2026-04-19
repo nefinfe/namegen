@@ -1,0 +1,34 @@
+# Swedish rule pack.
+# Swedish orthography allows å, ä, ö in addition to the 26 Latin letters and
+# has (mild) constraints the Markov model easily learns.
+
+language: sv
+description: >
+  Modern standard Swedish conventions, tolerant of 19th-century spelling
+  (double "v" for w, -qv- clusters like in "Lindqvist").
+
+orthography:
+  require_capital: true
+  max_repeat: 3
+  allowed_diacritics: "åäö"
+
+phonotactics:
+  min_length: 2
+  max_length: 24
+  allowed_characters: "abcdefghijklmnopqrstuvwxyzåäö"
+  forbidden_digraphs:
+    - "qx"
+    - "xz"
+
+morphology:
+  # Patronymic/matronymic affixes captured here for M5's composer.
+  affixes:
+    - { type: patronymic, gender: m, suffix: "sson" }
+    - { type: patronymic, gender: f, suffix: "sdotter" }
+
+eras:
+  - "1800-1850"
+  - "1850-1900"
+  - "1900-1950"
+  - "1950-2000"
+  - "2000-2025"

@@ -1,0 +1,62 @@
+# Corpora manifest for the default bundled sample pack.
+#
+# Every entry MUST carry an SPDX-compatible license tag. The loader never
+# silently ingests an unknown shard - this file is the single source of
+# truth. Real parquet corpora arrive in M2; M1 only needs small sample
+# wordlists that exercise the training + generation pipeline.
+#
+# All shards below are either derived from public-domain census data or are
+# synthetic fillers for smoke testing, tagged accordingly.
+
+version: 1
+
+corpora:
+  - id: en-given-f-sample
+    language: en
+    slot: given
+    gender: f
+    era: 1900-1950
+    path: corpora/en_given_f.txt
+    license: CC0-1.0
+    source: US SSA baby-names public-domain excerpt (small sample for unit tests)
+
+  - id: en-given-m-sample
+    language: en
+    slot: given
+    gender: m
+    era: 1900-1950
+    path: corpora/en_given_m.txt
+    license: CC0-1.0
+    source: US SSA baby-names public-domain excerpt (small sample for unit tests)
+
+  - id: en-surname-sample
+    language: en
+    slot: surname
+    path: corpora/en_surname.txt
+    license: CC0-1.0
+    source: US Census surname public-domain excerpt (small sample)
+
+  - id: sv-given-f-sample
+    language: sv
+    slot: given
+    gender: f
+    era: 1850-1900
+    path: corpora/sv_given_f.txt
+    license: CC0-1.0
+    source: Swedish SCB historical names public-domain excerpt (small sample)
+
+  - id: sv-given-m-sample
+    language: sv
+    slot: given
+    gender: m
+    era: 1850-1900
+    path: corpora/sv_given_m.txt
+    license: CC0-1.0
+    source: Swedish SCB historical names public-domain excerpt (small sample)
+
+  - id: sv-surname-sample
+    language: sv
+    slot: surname
+    path: corpora/sv_surname.txt
+    license: CC0-1.0
+    source: Swedish public-domain surname excerpt (small sample)
